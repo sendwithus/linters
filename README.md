@@ -35,3 +35,13 @@ Ensures that you aren't using feature branches in your projects.
 ```bash
 docker run --rm -i -v "$PWD":/app sendwithus/gopkglinter /app/Gopkg.toml
 ```
+
+## Goimportslinter
+
+Ensure that goimports have been run. NOT WORKING AT THE MOMENT.
+
+```bash
+docker run \
+  -v "$PWD":/usr/app \
+  sendwithus/goimportslinter:latest
+```
