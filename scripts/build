@@ -1,0 +1,6 @@
+#!/bin/bash
+
+package="$1"
+
+docker build -t sendwithus/$package $package
+docker push sendwithus/$package
