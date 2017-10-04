@@ -38,10 +38,11 @@ docker run --rm -i -v "$PWD":/app sendwithus/gopkglinter /app/Gopkg.toml
 
 ## Goimportslinter
 
-Ensure that goimports have been run. NOT WORKING AT THE MOMENT.
+Ensure that goimports have been run. MUST BE MOUNTED INSIDE THE GOPATH IN THE CONTAINER
 
 ```bash
 docker run \
-  -v "$PWD":/usr/app \
+  -v "$PWD":/go/src/github.com/sendwithus/project_name \
+  -w /go/src/github.com/sendwithus/project_name \
   sendwithus/goimportslinter:latest
 ```
