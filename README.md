@@ -46,3 +46,15 @@ docker run \
   -w /go/src/github.com/sendwithus/project_name \
   sendwithus/goimportslinter:latest
 ```
+
+
+## Python 2.7
+
+Enforces [PEP8](http://pep8.org/) style.
+
+```bash
+docker run --rm \
+  -v "$PWD"/src:/usr/src \
+  -w /usr/src \
+  sendwithus/linter-python-2.7:latest
+```

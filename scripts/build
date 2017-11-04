@@ -1,6 +1,14 @@
 #!/bin/bash
 
-package="$1"
+linter="$1"
+image="sendwithus/linter-$linter:latest"
 
-docker build -t sendwithus/$package $package
-docker push sendwithus/$package
+docker build -t $image $linter || exit $?
+
+echo
+read -p "Push to Docker Hub? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    docker push $image
+fi
