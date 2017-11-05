@@ -47,6 +47,16 @@ docker run \
   sendwithus/goimportslinter:latest
 ```
 
+## Golang
+
+Buffet of golang linters and import verifiers.
+
+```bash
+docker run --rm \
+    -v "$PWD":/go/src/github.com/org/project \
+    -w /go/src/github.com/org/project \
+    sendwithus/linter-golang:latest
+```
 
 ## Python 2.7
 
