@@ -4,8 +4,11 @@ FROM node:8-alpine
 RUN yarn global add eslint@4.7.2
 COPY eslint.json /usr/eslint.json
 
-# eslint-plugin-prettier
-RUN yarn global add eslint-config-prettier@2.6.0
+# prettier
+RUN yarn global add \
+    prettier@1.8.2 \
+    eslint-config-prettier@2.6.0 \
+    eslint-plugin-prettier@2.3.1
 
 # entrypoint
 COPY entrypoint.sh /bin/entrypoint.sh

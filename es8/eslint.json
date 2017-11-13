@@ -2,10 +2,23 @@
     "extends": [
         "prettier"
     ],
+    "plugins": [
+        "prettier"
+    ],
     "parserOptions": {
         "ecmaFeatures": {
             "experimentalObjectRestSpread": true
         },
         "ecmaVersion": 8
+    },
+    "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+                "semi": false,
+                "singleQuote": true,
+                "trailingComma": "es5"
+            }
+        ]
     }
 }
