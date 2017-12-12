@@ -10,7 +10,8 @@
         "exported type [A-Za-z0-9.]* should have comment or be unexported",
         "exported var [A-Za-z0-9.]* should have comment or be unexported",
         "exported function [A-Za-z0-9.]* should have comment or be unexported",
-        "exported method [A-Za-z0-9.]* should have comment or be unexported"
+        "exported method [A-Za-z0-9.]* should have comment or be unexported",
+        "exported const [A-Za-z0-9.]* should have comment or be unexported"
     ],
     "Fast": true
 }
