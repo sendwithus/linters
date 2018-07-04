@@ -11,6 +11,5 @@
     "Exclude": [
         "[a-z_]*.pb.go:",
         "exported.*should have comment.*or be unexported"
-    ],
-    "Fast": true
+    ]
 }
